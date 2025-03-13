@@ -1,19 +1,19 @@
-import Navbar from './pages/Navbar'
-import Hero from './pages/Hero'
-import PictureBoard from './pages/PictureBoard'
-import CustomerThought from './pages/CustomerThought'
-import Footer from './pages/Footer'
-import { Box, Typography, Container } from '@mui/material'
+import { Container } from '@mui/material'
+import Navbar from './layout/Navbar'
+import Hero from './layout/Hero'
+import PictureBoard from './layout/PictureBoard'
+import Testimonials from './layout/Testimonials'
+import Footer from './layout/Footer'
+import Leaf from './components/Leaf'
 
 function App() {
-  
-
   return (
-    <Container maxWidth={false} sx={{ maxWidth: 1720 }}>
+    <Container sx={{ maxWidth: 1000, position: 'relative' }}>
+      <Leaf />  {/* Decorative background with repeating leaf pattern */}
       <Navbar />
       <Hero />
       <PictureBoard />
-      <CustomerThought />
+      <Testimonials />
       <Footer />
     </Container>
   )
