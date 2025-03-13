@@ -43,7 +43,7 @@ export const CAROUSEL_SETTINGS = {
 
 // Define available languages
 export const LANGUAGES = [
-  { code: 'en', flag: '/flags/gb.svg', label: 'English' },
+  { code: 'en', flag: '/flags/uk.svg', label: 'English' },
   { code: 'es', flag: '/flags/es.svg', label: 'Español' },
 ];
 
