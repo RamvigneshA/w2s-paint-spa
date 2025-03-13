@@ -1,6 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+    typography: {
+        fontFamily: '"Segoe UI", sans-serif',
+    },
     palette: {
         primary: {
             main: '#F9B800',
@@ -32,8 +35,10 @@ const theme = createTheme({
                     color: '#262626',
                     borderRadius: '999px',
                     textTransform: 'none',
-                    fontWeight: 500,
+                    fontWeight: 600,
                     fontSize: '16px',
+                    padding: '16px 36px',
+                    gap: 4,
                     '&:hover': {
                         backgroundColor: '#e0a500',
                         transition: 'background-color 0.3s ease',

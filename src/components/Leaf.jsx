@@ -11,11 +11,11 @@ const Leaf = () => {
         width: '70%',
         height: '70%',
         backgroundImage: `url(${leafImage})`,
-        backgroundRepeat: 'repeat-y', // Repeat vertically
-        backgroundSize: 'contain', // Keep original size
+        backgroundRepeat: 'repeat-y',
+        backgroundSize: 'contain',
         zIndex: -1
       }}
     />);
 };
 
-export default Leaf;
+export default Leaf;  
