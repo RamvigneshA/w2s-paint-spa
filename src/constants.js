@@ -77,7 +77,11 @@ export const STYLES = {
   },
   NAVBAR: {
     height: 72,
-    borderBottom: '1px solid #2626261F',
+    position: 'sticky',
+    backgroundColor: 'rgb(255 250 233)',
+    top: 0,
+    zIndex: 1000,
+    borderBottom: '1px solid hsla(0, 0.00%, 14.90%, 0.12)',
   },
   HERO_CONTAINER: {
     py: { xs: 4, sm: 6, md: 8 },
