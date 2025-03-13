@@ -33,7 +33,11 @@ const theme = createTheme({
                     borderRadius: '999px',
                     textTransform: 'none',
                     fontWeight: 500,
-                    fontSize: '16px',   
+                    fontSize: '16px',
+                    '&:hover': {
+                        backgroundColor: '#e0a500',
+                        transition: 'background-color 0.3s ease',
+                    },
                 },
             },
         },

@@ -12,7 +12,7 @@ const Image = styled('img')({
 
 const PictureBoard = () => {
   const { t } = useTranslation();
-  
+
   return (
     <Stack
       direction={['column-reverse', 'row']}
@@ -40,27 +40,32 @@ const PictureBoard = () => {
           {t('vibrant_colors')}
         </Typography>
         <Stack direction="column" sx={{ mb: { xs: 2, sm: 3 } }}>
-          <Typography variant="body1" sx={{ textDecoration: 'underline', marginBottom: { xs: '15px', sm: '25px' } }}>
+          <Typography
+            variant="body1"
+            sx={{
+              textDecoration: 'underline',
+              marginBottom: { xs: '15px', sm: '25px' },
+            }}
+          >
             {t('beautiful_finish')}
           </Typography>
-          <Typography variant="body1">
-            {t('experience_coverage')}
-          </Typography>
+          <Typography variant="body1">{t('experience_coverage')}</Typography>
         </Stack>
-        <Button 
-          variant="contained" 
-          
-          sx={{ background: '#262626', color: COLORS.WHITE, maxWidth: { xs: '100%', sm: '60%' }, height: { xs: '70px', sm: '50px' } }} 
+        <Button
+          variant="contained"
+          sx={{
+            background: '#262626',
+            color: COLORS.WHITE,
+            maxWidth: { xs: '100%', sm: '60%' },
+            height: { xs: '70px', sm: '50px' },
+          }}
           endIcon={<ArrowRight color={COLORS.WHITE} size={20} />}
         >
           {t('view_collection')}
         </Button>
       </Stack>
       <Box sx={{ flex: 1.5 }}>
-        <Image 
-          src={vectorTwo}
-          alt={t('premium_paint_collection')} 
-        />
+        <Image src={vectorTwo} alt={t('premium_paint_collection')} />
       </Box>
     </Stack>
   );

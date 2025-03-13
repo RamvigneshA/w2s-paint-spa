@@ -1,24 +1,23 @@
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useLanguageStore } from '../utils/languageStore';
 import { SELECT_STYLES } from '../constants';
 
 const LanguageSelect = () => {
   const { language, setLanguage, languages } = useLanguageStore();
-  
-  // Handle language change
+
   const handleLanguageChange = (event) => {
     const newLanguage = event.target.value;
     setLanguage(newLanguage);
   };
-  
+
   return (
     <Select
       value={language}
       onChange={handleLanguageChange}
-      IconComponent={KeyboardArrowDownIcon}
+      IconComponent={ArrowDropDownIcon}
       sx={SELECT_STYLES}
       renderValue={(selected) => {
         const selectedLang = languages.find((lang) => lang.code === selected);
@@ -47,6 +46,6 @@ const LanguageSelect = () => {
       ))}
     </Select>
   );
-}
+};
 
 export default LanguageSelect;

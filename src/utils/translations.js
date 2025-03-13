@@ -1,4 +1,3 @@
-// Define translations for each language
 const translations = {
   en: {
     translation: {

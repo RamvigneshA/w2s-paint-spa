@@ -8,7 +8,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
-  
+
   const features = [
     t('premium_quality'),
     t('eco_friendly'),
@@ -17,13 +17,20 @@ const Hero = () => {
     t('low_voc'),
     t('fast_drying'),
   ];
-  
 
-  
   return (
-    <Box component="section" sx={STYLES.HERO_CONTAINER}>
-      <Stack alignItems="center" textAlign="center" gap={{ xs: '24px', sm: '32px' }} sx={{ margin: '0 auto' }}>
-        <Stack direction="column" alignItems="center" gap={{ xs: '10px', sm: '14px' }}>
+    <Box id="hero" component="section" sx={STYLES.HERO_CONTAINER}>
+      <Stack
+        alignItems="center"
+        textAlign="center"
+        gap={{ xs: '24px', sm: '32px' }}
+        sx={{ margin: '0 auto' }}
+      >
+        <Stack
+          direction="column"
+          alignItems="center"
+          gap={{ xs: '10px', sm: '14px' }}
+        >
           <Typography
             variant="body1"
             color="primary.main"
@@ -47,7 +54,7 @@ const Hero = () => {
               words={[t('colors_inspire')]}
               loop={1}
               cursor
-              cursorStyle='|'
+              cursorStyle="|"
               typeSpeed={70}
               delaySpeed={1000}
             />
@@ -65,7 +72,9 @@ const Hero = () => {
             <Chip
               key={feature}
               label={feature}
-              icon={<OutlinedTick color={theme.palette.primary.main} size={24} />}
+              icon={
+                <OutlinedTick color={theme.palette.primary.main} size={24} />
+              }
               sx={STYLES.CHIP}
             />
           ))}

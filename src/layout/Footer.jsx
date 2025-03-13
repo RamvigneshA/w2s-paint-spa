@@ -15,7 +15,7 @@ const Footer = () => {
       gap={['20px', '40px']}
       sx={STYLES.FOOTER}
     >
-      {/* Header Section */}
+      
       <Stack
         width="100%"
         direction={['column', 'row']}
@@ -56,6 +56,9 @@ const Footer = () => {
         justifyContent="space-between"
         alignItems="center"
         gap="12px"
+        onClick={() => {
+          document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+        }}
       >
         <Typography
           variant="body2"

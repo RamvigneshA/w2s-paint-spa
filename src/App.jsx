@@ -9,7 +9,7 @@ import Leaf from './components/Leaf'
 function App() {
   return (
     <Container sx={{ maxWidth: 1000, position: 'relative' }}>
-      <Leaf />  {/* Decorative background with repeating leaf pattern */}
+      <Leaf /> 
       <Navbar />
       <Hero />
       <PictureBoard />

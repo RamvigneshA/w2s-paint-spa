@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from './utils/theme.js'
-import './utils/i18n' // Import i18n configuration
+import './utils/i18n' 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

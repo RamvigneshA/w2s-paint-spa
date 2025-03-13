@@ -70,10 +70,11 @@ const Testimonials = () => {
               flex: '0 0 auto',
               width: { xs: '100%', sm: '400px' },
               minWidth: { xs: '100%', sm: '400px' },
+              marginRight: { sm: '48px' },
             }}
           >
             <img
-              src={TESTIMONIAL_IMAGES[TESTIMONIALS[0].image]}
+              src={TESTIMONIAL_IMAGES[TESTIMONIALS[index].image]}
               alt={t('customer_testimonial')}
               style={{
                 display: 'block',
@@ -81,7 +82,6 @@ const Testimonials = () => {
                 height: 'auto',
                 objectFit: 'cover',
                 borderRadius: '50%',
-                marginBottom: '30px',
               }}
             />
           </Box>
@@ -91,7 +91,6 @@ const Testimonials = () => {
               flex: 1,
               display: 'flex',
               alignItems: 'center',
-              
             }}
           >
             <Carousel
@@ -106,7 +105,7 @@ const Testimonials = () => {
             >
               {TESTIMONIALS.map((testimonial) => (
                 <Carousel.Item key={testimonial.id}>
-                  <Stack spacing={3}>
+                  <Stack sx={{ marginLeft: { xs: '0px', sm: '40px' } }}>
                     <Typography
                       variant="h2"
                       sx={{
@@ -147,14 +146,14 @@ const Testimonials = () => {
 
         <Box
           display="flex"
-          justifyContent="center"
+          justifyContent={{ xs: 'center', sm: 'flex-start' }}
           width="100%"
           sx={{
-            md: {
-              position: 'absolute',
-              bottom: '0',
-              left: '50%',
-            },
+            position: { xs: 'static', sm: 'absolute' },
+            bottom: { sm: '130px' },
+            left: { sm: '60%' },
+            transform: { sm: 'translate(-50%, 50%)' },
+            paddingLeft: { sm: '440px' },
           }}
         >
           <CustomNavigation onPrev={handlePrevious} onNext={handleNext} />

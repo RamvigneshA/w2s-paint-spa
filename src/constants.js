@@ -11,10 +11,12 @@ export const COLORS = {
 
 // Import testimonial images
 import testimonialOne from './assets/testimonialOne.png';
+import trump from './assets/trump.png';
 
 // Testimonial images mapping
 export const TESTIMONIAL_IMAGES = {
-  testimonialOne
+  testimonialOne,
+  trump
 };
 
 // Testimonials data
@@ -26,8 +28,8 @@ export const TESTIMONIALS = [
   },
   {
     id: 2,
-    image: 'testimonialOne',
-    name: 'Jane Smith',
+    image: 'trump',
+    name: 'Trump',
   },
 ];
 
@@ -73,21 +75,20 @@ export const STYLES = {
     },
   },
   NAVBAR: {
-    height: 72, 
-    borderBottom: '1px solid rgba(0, 0, 0, 0.12)'
+    height: 72,
+    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
   },
   HERO_CONTAINER: {
-    py: { xs: 4, sm: 6, md: 8 }
+    py: { xs: 4, sm: 6, md: 8 },
   },
   PICTURE_BOARD: {
-    background: 'primary.main', 
-    borderRadius: { xs: '50px', sm: '100px' }, 
+    background: 'primary.main',
+    borderRadius: { xs: '50px', sm: '100px' },
     alignItems: 'center',
     justifyContent: 'center',
-
     padding: { xs: '30px 30px 30px 30px', sm: '20px 20px 20px 80px' },
     maxWidth: '1200px',
-    mt: { xs: 4, sm: 6, md: 8 }
+    mt: { xs: 4, sm: 6, md: 8 },
   },
   TESTIMONIALS_CONTAINER: {
     bgcolor: 'background.paper',
@@ -101,6 +102,6 @@ export const STYLES = {
     borderRadius: '32px',
     padding: ['24px', '64px'],
     width: '100%',
-    marginBottom: '72px'
-  }
+    marginBottom: '72px',
+  },
 };
