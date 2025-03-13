@@ -45,7 +45,7 @@ const translations = {
       
       // Hero
       "transform_spaces": "TRANSFORMEZ VOS ESPACES AUJOURD'HUI.",
-      "colors_inspire": "Des Couleurs Qui Inspirent la Vie.",
+      "colors_inspire": "Couleurs Vivent Mur",
       "premium_quality": "Qualité Premium",
       "eco_friendly": "Formule Écologique",
       "color_retention": "Rétention Supérieure des Couleurs",
