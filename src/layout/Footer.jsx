@@ -22,14 +22,14 @@ const Footer = () => {
         justifyContent="space-between"
         alignItems={['center', 'baseline']}
         gap={['24px', '0px']}
+        borderBottom={`1px solid #FFFFFF1F`}
+        padding={'40px'}
       >
         <Typography
           variant="h4"
           fontWeight="bold"
           textAlign={['center', 'left']}
-          sx={{
-            flex: 1,
-          }}
+          flexGrow={2}
         >
           {t('ready_transform')}
         </Typography>
@@ -69,7 +69,7 @@ const Footer = () => {
           variant="body2"
           sx={{
             color: COLORS.FOOTER_TEXT,
-            textDecoration: 'underline'
+           
           }}
         >
           {t('privacy_terms')}

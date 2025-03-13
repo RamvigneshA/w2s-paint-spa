@@ -11,6 +11,7 @@ const translations = {
       "transform_spaces": "TRANSFORM YOUR SPACES TODAY.",
       "colors_inspire": "Colors That Inspire Life.",
       "premium_quality": "Premium Quality",
+      "easy_application": "Easy Application",
       "eco_friendly": "Eco-Friendly Formula",
       "color_retention": "Superior Color Retention",
       "weather_resistant": "Weather Resistant",
@@ -45,8 +46,9 @@ const translations = {
       
       // Hero
       "transform_spaces": "TRANSFORMEZ VOS ESPACES AUJOURD'HUI.",
-      "colors_inspire": "Couleurs Vivent Mur",
+      "colors_inspire": "Couleurs Vivent Mur.",
       "premium_quality": "Qualité Premium",
+      "easy_application": "Application Facile",
       "eco_friendly": "Formule Écologique",
       "color_retention": "Rétention Supérieure des Couleurs",
       "weather_resistant": "Résistant aux Intempéries",

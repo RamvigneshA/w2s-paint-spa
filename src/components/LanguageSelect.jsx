@@ -20,6 +20,18 @@ const LanguageSelect = () => {
       onChange={handleLanguageChange}
       IconComponent={KeyboardArrowDownIcon}
       sx={SELECT_STYLES}
+      renderValue={(selected) => {
+        const selectedLang = languages.find((lang) => lang.code === selected);
+        return (
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              src={selectedLang.flag}
+              alt={`${selected} flag`}
+              style={{ width: '24px', height: '18px' }}
+            />
+          </Box>
+        );
+      }}
     >
       {languages.map(({ code, flag, label }) => (
         <MenuItem key={code} value={code}>

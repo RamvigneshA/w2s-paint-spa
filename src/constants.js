@@ -61,10 +61,10 @@ export const SELECT_STYLES = {
 export const STYLES = {
   CHIP: {
     fontWeight: 600,
-    padding: '14px 20px',
+    padding: '14px 40px 14px 20px',
     color: 'text.primary',
     bgcolor: 'background.paper',
-    gap: '2px',
+    gap: '7px',
     '& .MuiChip-label': {
       padding: 0,
     },
@@ -81,8 +81,11 @@ export const STYLES = {
   },
   PICTURE_BOARD: {
     background: 'primary.main', 
-    borderRadius: { xs: '24px', sm: '32px' }, 
-    padding: { xs: '20px', sm: '40px', md: '64px' }, 
+    borderRadius: { xs: '50px', sm: '100px' }, 
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    padding: { xs: '30px 30px 30px 30px', sm: '20px 20px 20px 80px' },
     maxWidth: '1200px',
     mt: { xs: 4, sm: 6, md: 8 }
   },

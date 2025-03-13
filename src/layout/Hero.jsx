@@ -27,7 +27,8 @@ const Hero = () => {
           <Typography
             variant="body1"
             color="primary.main"
-            fontWeight="bold"
+            fontWeight="700"
+            fontSize={{ xs: '15px', sm: '20px' }}
             sx={{ margin: 0 }}
           >
             {t('transform_spaces')}
@@ -35,6 +36,8 @@ const Hero = () => {
           <Typography
             variant="h1"
             color="text.primary"
+            fontWeight="700"
+            fontSize={{ xs: '32px', sm: '60px' }}
             sx={{
               margin: { xs: '10px 0 16px 0', sm: '14px 0 24px 0' },
             }}
@@ -56,7 +59,7 @@ const Hero = () => {
           flexWrap="wrap"
           justifyContent="center"
           gap={{ xs: '10px', sm: '14px' }}
-          sx={{ maxWidth: '700px' }}
+          sx={{ maxWidth: '1000px' }}
         >
           {features.map((feature) => (
             <Chip
@@ -71,6 +74,12 @@ const Hero = () => {
           variant="contained"
           color="primary"
           endIcon={<ArrowRight color={theme.palette.text.primary} size={20} />}
+          sx={{
+            gap: '15px',
+            fontSize: '16px',
+            fontWeight: '700',
+            padding: '14px 20px',
+          }}
         >
           {t('explore_products')}
         </Button>

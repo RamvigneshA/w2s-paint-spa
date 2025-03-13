@@ -20,6 +20,7 @@ const PictureBoard = () => {
       alignItems="center"
       gap={['0', '40px']}
       sx={STYLES.PICTURE_BOARD}
+      bgcolor={COLORS.PRIMARY}
     >
       <Stack
         direction="column"
@@ -28,6 +29,9 @@ const PictureBoard = () => {
       >
         <Typography
           variant="h2"
+          fontSize={{ xs: '24px', sm: '32px' }}
+          paddingBottom={'20px'}
+          fontWeight="700"
           sx={{
             color: COLORS.BLACK,
             lineHeight: 1.2,
@@ -36,7 +40,7 @@ const PictureBoard = () => {
           {t('vibrant_colors')}
         </Typography>
         <Stack direction="column" sx={{ mb: { xs: 2, sm: 3 } }}>
-          <Typography variant="body1" sx={{ textDecoration: 'underline' }}>
+          <Typography variant="body1" sx={{ textDecoration: 'underline', marginBottom: { xs: '15px', sm: '25px' } }}>
             {t('beautiful_finish')}
           </Typography>
           <Typography variant="body1">
@@ -45,7 +49,8 @@ const PictureBoard = () => {
         </Stack>
         <Button 
           variant="contained" 
-          sx={{ background: COLORS.BLACK, color: COLORS.WHITE, maxWidth: { xs: '80%', sm: '60%' } }} 
+          
+          sx={{ background: '#262626', color: COLORS.WHITE, maxWidth: { xs: '100%', sm: '60%' }, height: { xs: '70px', sm: '50px' } }} 
           endIcon={<ArrowRight color={COLORS.WHITE} size={20} />}
         >
           {t('view_collection')}
