@@ -1,14 +1,9 @@
-import { Box, Typography, Stack, styled, Button } from '@mui/material';
+import { Box, Typography, Stack, Button } from '@mui/material';
 import ArrowRight from '../icons/ArrowRight';
 import vectorTwo from '../assets/vectorTwo.png';
 import { useTranslation } from 'react-i18next';
 import { STYLES, COLORS } from '../constants';
-
-const Image = styled('img')({
-  width: '100%',
-  height: '100%',
-  objectFit: 'contain',
-});
+import Image from '../components/Image';
 
 const PictureBoard = () => {
   const { t } = useTranslation();
@@ -29,9 +24,10 @@ const PictureBoard = () => {
       >
         <Typography
           variant="h2"
-          fontSize={{ xs: '24px', sm: '32px' }}
-          paddingBottom={'20px'}
-          fontWeight="700"
+          fontSize="32px"
+          textAlign={['center', 'left']}
+          paddingBottom="20px"
+          fontWeight={700}
           sx={{
             color: COLORS.BLACK,
             lineHeight: 1.2,
@@ -42,21 +38,23 @@ const PictureBoard = () => {
         <Stack direction="column" sx={{ mb: { xs: 2, sm: 3 } }}>
           <Typography
             variant="body1"
+            textAlign={['center', 'left']}
+            fontWeight={600}
             sx={{
               textDecoration: 'underline',
-              marginBottom: { xs: '15px', sm: '25px' },
             }}
           >
             {t('beautiful_finish')}
           </Typography>
-          <Typography variant="body1">{t('experience_coverage')}</Typography>
+          <Typography variant="body1" textAlign={['center', 'left']}>{t('experience_coverage')}</Typography>
         </Stack>
         <Button
           variant="contained"
           sx={{
             background: '#262626',
             color: COLORS.WHITE,
-            maxWidth: { xs: '100%', sm: '60%' },
+            padding: '16px 36px',
+            gap: 3,
             height: { xs: '70px', sm: '50px' },
           }}
           endIcon={<ArrowRight color={COLORS.WHITE} size={20} />}
@@ -65,7 +63,7 @@ const PictureBoard = () => {
         </Button>
       </Stack>
       <Box sx={{ flex: 1.5 }}>
-        <Image src={vectorTwo} alt={t('premium_paint_collection')} />
+        <Image sx={{ width: '100%', height: ['100%', '500px'] }} src={vectorTwo} alt={t('premium_paint_collection')} />
       </Box>
     </Stack>
   );

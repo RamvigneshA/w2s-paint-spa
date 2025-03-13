@@ -84,10 +84,8 @@ const Hero = () => {
           color="primary"
           endIcon={<ArrowRight color={theme.palette.text.primary} size={20} />}
           sx={{
-            gap: '15px',
-            fontSize: '16px',
-            fontWeight: '700',
-            padding: '14px 20px',
+            gap: 4,
+            padding: '16px 36px',
           }}
         >
           {t('explore_products')}

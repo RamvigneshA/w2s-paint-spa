@@ -11,12 +11,12 @@ export const COLORS = {
 
 // Import testimonial images
 import testimonialOne from './assets/testimonialOne.png';
-import trump from './assets/trump.png';
+import testimonialTwo from './assets/testimonialTwo.png';
 
 // Testimonial images mapping
 export const TESTIMONIAL_IMAGES = {
   testimonialOne,
-  trump
+  testimonialTwo
 };
 
 // Testimonials data
@@ -28,7 +28,7 @@ export const TESTIMONIALS = [
   },
   {
     id: 2,
-    image: 'trump',
+    image: 'testimonialTwo',
     name: 'Trump',
   },
 ];
@@ -63,7 +63,8 @@ export const SELECT_STYLES = {
 export const STYLES = {
   CHIP: {
     fontWeight: 600,
-    padding: '14px 40px 14px 20px',
+    padding: '18px 22px',
+    borderRadius: '100px',
     color: 'text.primary',
     bgcolor: 'background.paper',
     gap: '7px',
@@ -76,14 +77,14 @@ export const STYLES = {
   },
   NAVBAR: {
     height: 72,
-    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+    borderBottom: '1px solid #2626261F',
   },
   HERO_CONTAINER: {
     py: { xs: 4, sm: 6, md: 8 },
   },
   PICTURE_BOARD: {
     background: 'primary.main',
-    borderRadius: { xs: '50px', sm: '100px' },
+    borderRadius: { xs: '50px', sm: '70px' },
     alignItems: 'center',
     justifyContent: 'center',
     padding: { xs: '30px 30px 30px 30px', sm: '20px 20px 20px 80px' },
@@ -93,7 +94,7 @@ export const STYLES = {
   TESTIMONIALS_CONTAINER: {
     bgcolor: 'background.paper',
     borderRadius: { xs: '24px', sm: '32px' },
-    padding: { xs: '20px', sm: '40px', md: '64px' },
+    padding: { xs: '20px', sm: '24px 32px' },
     maxWidth: '1200px',
   },
   FOOTER: {
@@ -102,6 +103,7 @@ export const STYLES = {
     borderRadius: '32px',
     padding: ['24px', '64px'],
     width: '100%',
-    marginBottom: '72px',
+    mt: ['36px', '72px'],
+    mb: ['36px', '72px'],
   },
 };

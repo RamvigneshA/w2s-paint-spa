@@ -23,11 +23,12 @@ const Footer = () => {
         alignItems={['center', 'baseline']}
         gap={['24px', '0px']}
         borderBottom={`1px solid #FFFFFF1F`}
-        padding={'40px'}
+        pt={['24px', '0']}
+        pb={['24px', '40px']}
       >
         <Typography
           variant="h4"
-          fontWeight="bold"
+          fontWeight={600}
           textAlign={['center', 'left']}
           flexGrow={2}
         >
@@ -39,8 +40,10 @@ const Footer = () => {
             endIcon={<ArrowRight color={COLORS.BLACK} size={20} />}
             sx={{
               bgcolor: { xs: 'primary.main', md: 'white' },
-              maxWidth: ['100%', '60%'],
+              height: { xs: '70px', sm: '50px' },
               minWidth: 'max-content',
+              padding: '16px 36px',
+              gap: 3,
               flexGrow: [1, 'unset']
             }}
           >
@@ -56,9 +59,6 @@ const Footer = () => {
         justifyContent="space-between"
         alignItems="center"
         gap="12px"
-        onClick={() => {
-          document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
-        }}
       >
         <Typography
           variant="body2"
@@ -69,10 +69,13 @@ const Footer = () => {
           {t('copyright')}
         </Typography>
         <Typography
+          component="a"
+          href="#"
           variant="body2"
           sx={{
             color: COLORS.FOOTER_TEXT,
-           
+            textDecoration: ['none', 'underline'],
+            cursor: ['default', 'pointer'],
           }}
         >
           {t('privacy_terms')}

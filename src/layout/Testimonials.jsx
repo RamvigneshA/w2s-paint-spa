@@ -10,12 +10,22 @@ import {
   STYLES,
   TESTIMONIAL_IMAGES,
 } from '../constants';
+import Image from '../components/Image';
 
 const CustomNavigation = ({ onPrev, onNext }) => {
   const theme = useTheme();
 
   return (
-    <Stack gap={2} direction="row">
+    <Stack
+      gap={2}
+      direction="row"
+      justifyContent={['center', 'flex-end']}
+      sx={{
+        left: { md: '40%' },
+        bottom: { md: '20%' },
+        position: { md: "absolute" }
+      }}
+    >
       <Box sx={{ cursor: 'pointer' }} onClick={onPrev}>
         <Arrow position="left" />
       </Box>
@@ -52,44 +62,37 @@ const Testimonials = () => {
       <Stack
         mt={{ xs: '40px', sm: '56px', md: '72px' }}
         sx={STYLES.TESTIMONIALS_CONTAINER}
-        gap={4}
+        gap={{ xs: 1, sm: 3 }}
         position={'relative'}
         justifyContent={'center'}
       >
         <Stack
           direction={['column', 'row']}
-          spacing={3}
+          gap={{ xs: 2 }}
           sx={{
             maxWidth: '1200px',
             margin: '0 auto',
             padding: { xs: '20px', sm: '40px' },
           }}
         >
-          <Box
+
+          <Image
+            src={TESTIMONIAL_IMAGES[TESTIMONIALS[index].image]}
+            alt={t('customer_testimonial')}
             sx={{
-              flex: '0 0 auto',
-              width: { xs: '100%', sm: '400px' },
-              minWidth: { xs: '100%', sm: '400px' },
-              marginRight: { sm: '48px' },
+              flex: 1,
+              width: '280px',
+              height: 'auto',
+              objectFit: 'cover',
+              borderRadius: '50%',
             }}
-          >
-            <img
-              src={TESTIMONIAL_IMAGES[TESTIMONIALS[index].image]}
-              alt={t('customer_testimonial')}
-              style={{
-                display: 'block',
-                width: '100%',
-                height: 'auto',
-                objectFit: 'cover',
-                borderRadius: '50%',
-              }}
-            />
-          </Box>
+          />
+
 
           <Box
             sx={{
-              flex: 1,
               display: 'flex',
+              flex: 2,
               alignItems: 'center',
             }}
           >
@@ -105,7 +108,7 @@ const Testimonials = () => {
             >
               {TESTIMONIALS.map((testimonial) => (
                 <Carousel.Item key={testimonial.id}>
-                  <Stack sx={{ marginLeft: { xs: '0px', sm: '40px' } }}>
+                  <Stack sx={{ marginLeft: { xs: '0px', sm: '40px' } }} gap={[2, 1]}>
                     <Typography
                       variant="h2"
                       sx={{
@@ -114,6 +117,7 @@ const Testimonials = () => {
                         fontSize: { xs: '24px', sm: '40px' },
                         fontWeight: 700,
                         lineHeight: { xs: '32px', sm: '48px' },
+                        mb: { md: 2 }
                       }}
                     >
                       {t('customer_one_thought')}
@@ -131,7 +135,8 @@ const Testimonials = () => {
                     <Typography
                       sx={{
                         color: 'text.primary',
-                        fontWeight: 600,
+                        fontWeight: [700, 600],
+                        fontSize: ['20px', '18px'],
                         textAlign: { xs: 'center', sm: 'left' },
                       }}
                     >
@@ -143,21 +148,7 @@ const Testimonials = () => {
             </Carousel>
           </Box>
         </Stack>
-
-        <Box
-          display="flex"
-          justifyContent={{ xs: 'center', sm: 'flex-start' }}
-          width="100%"
-          sx={{
-            position: { xs: 'static', sm: 'absolute' },
-            bottom: { sm: '130px' },
-            left: { sm: '60%' },
-            transform: { sm: 'translate(-50%, 50%)' },
-            paddingLeft: { sm: '440px' },
-          }}
-        >
-          <CustomNavigation onPrev={handlePrevious} onNext={handleNext} />
-        </Box>
+        <CustomNavigation onPrev={handlePrevious} onNext={handleNext} />
       </Stack>
     </Stack>
   );
